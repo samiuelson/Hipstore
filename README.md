@@ -3,5 +3,6 @@ _Android object persistence library. Lightweight and hipster._
 
 ###Specs
 * Written in Kotlin lang
-* Using SharedPreferences
-* Serializing objects to json format
+* Using SharedPreferences under the hood
+* Serializing objects to json format with Gson lib
+
