@@ -1,5 +1,5 @@
 # Hipstore
-_Android object persistence library. Lightweight and hipster._
+_Android object persistence library. Lightweight, useful and hipster._
 
 ###Specs
 * Written in Kotlin lang
