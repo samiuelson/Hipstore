@@ -1,6 +1,3 @@
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tech.lab23.hipstore">
-
-    <application android:label="@string/lib_name" />
+<manifest package="tech.lab23.hipstore">
+    <application />
 </manifest>
