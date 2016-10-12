@@ -7,12 +7,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class EntitiesStorage<T extends Serializable> implements Hipstore.MultiEntities<T> {
+public class EntitiesStorage<T> implements Hipstore.MultiEntities<T> {
 
     private final Class<T> clazz;
     private final String key;
@@ -64,7 +63,7 @@ public class EntitiesStorage<T extends Serializable> implements Hipstore.MultiEn
         final JsonElement jsonElement = jsonParser.parse(jsonString);
         if (jsonElement.isJsonArray()) {
             final JsonArray jsonArray = jsonElement.getAsJsonArray();
-            final List<T> list = new ArrayList(jsonArray.size());
+            final List<T> list = new ArrayList<>(jsonArray.size());
             final Iterator<JsonElement> iterator = jsonArray.iterator();
             while (iterator.hasNext()) {
                 final T item = gson.fromJson(iterator.next(), clazz);

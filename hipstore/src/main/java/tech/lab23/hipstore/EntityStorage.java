@@ -6,9 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-import java.io.Serializable;
-
-public class EntityStorage<T extends Serializable> implements Hipstore.SingleEntity<T> {
+public class EntityStorage<T> implements Hipstore.SingleEntity<T> {
 
     private final Class<T> clazz;
     private final String key;
