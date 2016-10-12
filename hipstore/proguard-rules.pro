@@ -15,3 +15,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class tech.lab23.hipstore.** { *; }
+-keep interface tech.lab23.hipstore.** { *; }
