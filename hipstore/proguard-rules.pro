@@ -17,4 +17,4 @@
 #}
 -keep class tech.lab23.hipstore.** { *; }
 -keep interface tech.lab23.hipstore.** { *; }
--keepattributes SourceFile,LineNumberTable,Signature,*Annotation*
+-keepattributes Signature
