@@ -25,6 +25,12 @@ public class EntitiesStorage<T> implements Hipstore.MultiEntities<T> {
         this.prefs = prefs;
     }
 
+    public EntitiesStorage(SharedPreferences prefs, Class<T> clazz, String storageKey) {
+        this.clazz = clazz;
+        this.key = storageKey;
+        this.prefs = prefs;
+    }
+
     @Override
     public boolean contains(T item) {
         return getAll().contains(item);

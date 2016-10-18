@@ -20,6 +20,12 @@ public class EntityStorage<T> implements Hipstore.SingleEntity<T> {
         this.prefs = prefs;
     }
 
+    public EntityStorage(SharedPreferences prefs, Class<T> clazz, String storageKey) {
+        this.clazz = clazz;
+        this.key = storageKey;
+        this.prefs = prefs;
+    }
+
     @Override
     public void remove(T item) {
         prefs.edit().remove(key).apply();
