@@ -1,5 +1,5 @@
 # Hipstore
-_Android object persistence library. Lightweight, useful and hipster._
+_Android objects persisting library. Natural, NoSQL and hipster._
 
 [![Release](https://jitpack.io/v/samiuelson/Hipstore.svg?style=flat-square)](https://jitpack.io/#samiuelson/Hipstore)
 
