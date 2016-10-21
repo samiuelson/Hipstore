@@ -15,7 +15,6 @@ import org.robolectric.annotation.Config
 class EntitiesStorageTest {
     var prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(RuntimeEnvironment.application)
 
-
     @Before
     fun init() {
         prefs.edit().clear().apply()
