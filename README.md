@@ -38,14 +38,17 @@ Step 2. Add the dependency
 ### Usage example (Kotlin lang)
 Declare entities model classes:
 ```kotlin
-class Person(val name: String, val age: Int, val annimals: List<Animal>)
+class Person(val name: String, val age: Int, val animals: List<Animal>)
 class Animal(val name: String)
 class SecretToken(val token: String)
 ```
 Access `EntityStorage<T>` or `EntitiesSotage<T>` instance by passing  `SharedPreferences` instance and java `class` in constructor:
 ```kotlin
 val storage: EntitiesStorage<Person> = EntityStorage<Person>(prefs, Person::class.java) // for multiple instances storage
-val storage: EntityStorage<SecretToken> = EntityStorage<SecretToken>(prefs, Person::class.java) // for single instance object storage
+```
+or
+```kotlin
+val storage: EntityStorage<SecretToken> = EntityStorage<SecretToken>(prefs, SecretToken::class.java) // for single instance object storage
 ```
 Classes above allow to perform CRUD operations.
 Once you call `add(object: Type)` or `put(object: Type)` object is serialized and stored immediately.
