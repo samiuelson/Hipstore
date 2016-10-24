@@ -44,12 +44,12 @@ class SecretToken(val token: String)
 ```
 Access `EntityStorage<T>` or `EntitiesSotage<T>` instance by passing  `SharedPreferences` instance and java `class` in constructor:
 ```kotlin
-val storage: EntitiesStorage<Person> = EntityStorage<Person>(prefs, Person::class.java) // for multiple instances storage
+val storage: EntitiesStorage<Person> = EntitiesStorage<Person>(prefs, Person::class.java) // for multiple instances storage
 ```
 or
 ```kotlin
 val storage: EntityStorage<SecretToken> = EntityStorage<SecretToken>(prefs, SecretToken::class.java) // for single instance object storage
 ```
 Classes above allow to perform CRUD operations.
-Once you call `add(object: Type)` or `put(object: Type)` object is serialized and stored immediately.
+Once you call `EntitiesStorage.add(object: Type)` or `EntityStorage.put(object: Type)` object is serialized and stored immediately.
 All methods are thread-safe.
