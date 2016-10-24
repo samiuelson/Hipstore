@@ -4,13 +4,9 @@ import java.util.*
 
 class TestMocks {
 
-    class Person(val name: String, val age: Int, val annimals: List<Animal>) {
+    class Person(val name: String, val age: Int, val annimals: List<Animal>)
 
-    }
-
-    class Animal(val name: String) {
-
-    }
+    class Animal(val name: String)
 
     object MocksProvider {
         fun provideBob(): Person {
