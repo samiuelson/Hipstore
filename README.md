@@ -17,6 +17,9 @@ Don't waste time and resources implementing SQL db in mobile app.
 In modern world often all the content is stored on a server side.
 Whenever your mobile client just needs to fetch and cache the data from server and persist user preferences settings Hipstore is for you.
 
+### Keep in mind
+... that Hipstore storage is not encrypted. Hipstore is also not suitable for storing very large amounts of data as all the objects are loaded into memory when deserializing them from SharedPreferences file. 
+
 ###Gradle config
 To get a Hipstore project into your build:
 
