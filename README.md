@@ -1,6 +1,8 @@
 # Hipstore
 _Android objects persisting library. Natural, NoSQL and hipster._
 
+_Save any Java / Kotlin objects in Shared Preferences in natural way._
+
 [![Release](https://jitpack.io/v/samiuelson/Hipstore.svg?style=flat-square)](https://jitpack.io/#samiuelson/Hipstore)
 
 ###Specs
