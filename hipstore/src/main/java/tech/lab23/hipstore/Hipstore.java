@@ -7,6 +7,7 @@ interface Hipstore {
         boolean contains(T item);
         void remove(T item);
         void add(T item);
+        void add(T item, int index);
         List<T> getAll();
         void clear();
     }

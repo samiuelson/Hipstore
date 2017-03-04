@@ -51,6 +51,17 @@ public class EntitiesStorage<T> implements Hipstore.MultiEntities<T> {
     }
 
     @Override
+    public void add(T item, int index) {
+        final List<T> list = getAll();
+        if (index > list.size()-1) {
+            add(item);
+        } else {
+            list.add(index, item);
+        }
+        prefs.edit().putString(key, listToJsonString(list)).apply();
+    }
+
+    @Override
     public List<T> getAll() {
         final String jsonString = prefs.getString(key, "");
         return jsonStringToList(jsonString);
