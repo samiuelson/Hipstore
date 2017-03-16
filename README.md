@@ -5,7 +5,7 @@ _Save any Java / Kotlin objects in Shared Preferences in natural way._
 
 [![Release](https://jitpack.io/v/samiuelson/Hipstore.svg?style=flat-square)](https://jitpack.io/#samiuelson/Hipstore)
 
-###Specs
+### Specs
 * NoSQL
 * Natural & extremely easy to implement
 * Serializing objects to json
