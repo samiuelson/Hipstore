@@ -22,7 +22,7 @@ Whenever your mobile client just needs to fetch and cache the data from server a
 ### Keep in mind
 Hipstore storage is not encrypted and you should not store any sensitive data in it. Hipstore is also not suitable for storing very large amounts of data as all the objects are loaded into memory when deserializing them from SharedPreferences file. It's just a wrapper that allows to save non-primitive objects in SharedPreferences. 
 
-###Gradle config
+### Gradle config
 To get a Hipstore project into your build:
 
 Step 1. Add the JitPack repository to your build file
