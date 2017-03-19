@@ -81,9 +81,8 @@ public class EntitiesStorage<T> implements Hipstore.MultiEntities<T> {
         if (jsonElement.isJsonArray()) {
             final JsonArray jsonArray = jsonElement.getAsJsonArray();
             final List<T> list = new ArrayList<>(jsonArray.size());
-            final Iterator<JsonElement> iterator = jsonArray.iterator();
-            while (iterator.hasNext()) {
-                final T item = gson.fromJson(iterator.next(), clazz);
+            for (JsonElement aJsonArray : jsonArray) {
+                final T item = gson.fromJson(aJsonArray, clazz);
                 list.add(item);
             }
             return list;
