@@ -23,8 +23,7 @@ class EntitiesStorageTest {
     @Test
     fun contains() {
         // given empty storage
-        val storage: EntitiesStorage<TestMocks.Person> =
-                EntitiesStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entitiesStorage<TestMocks.Person>(prefs)
         org.junit.Assert.assertTrue(storage.all.isEmpty())
 
         // when Bob is added to storage
@@ -39,8 +38,7 @@ class EntitiesStorageTest {
     @Test
     fun remove() {
         // given storage with Bob inside
-        val storage: EntitiesStorage<TestMocks.Person> =
-                EntitiesStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entitiesStorage<TestMocks.Person>(prefs)
         org.junit.Assert.assertTrue(storage.all.isEmpty())
         val bob = TestMocks.MocksProvider.provideBob()
         storage.add(bob)
@@ -57,8 +55,7 @@ class EntitiesStorageTest {
     @Test
     fun getAll() {
         // given storage
-        val storage: EntitiesStorage<TestMocks.Person> =
-                EntitiesStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entitiesStorage<TestMocks.Person>(prefs)
         org.junit.Assert.assertTrue(storage.all.isEmpty())
 
         // when
@@ -79,8 +76,7 @@ class EntitiesStorageTest {
     @Throws(Exception::class)
     fun clear() {
         // given storage with Bob and Ala inside
-        val storage: EntitiesStorage<TestMocks.Person> =
-                EntitiesStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entitiesStorage<TestMocks.Person>(prefs)
         org.junit.Assert.assertTrue(storage.all.isEmpty())
         val bob = TestMocks.MocksProvider.provideBob()
         val ala = TestMocks.MocksProvider.provideAlice()

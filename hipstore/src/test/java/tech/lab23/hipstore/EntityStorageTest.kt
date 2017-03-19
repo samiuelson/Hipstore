@@ -27,8 +27,7 @@ class EntityStorageTest {
     @Throws(Exception::class)
     fun remove() {
         // given storage with Bob inside
-        val storage: EntityStorage<TestMocks.Person> = EntityStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
-                EntitiesStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entityStorage<TestMocks.Person>(prefs)
         val bob = TestMocks.MocksProvider.provideBob()
         storage.put(bob)
 
@@ -43,7 +42,7 @@ class EntityStorageTest {
     @Throws(Exception::class)
     fun put() {
         // given empty storage
-        val storage: EntityStorage<TestMocks.Person> = EntityStorage<TestMocks.Person>(prefs, TestMocks.Person::class.java)
+        val storage = entityStorage<TestMocks.Person>(prefs)
         val bob = TestMocks.MocksProvider.provideBob()
         Assert.assertTrue(storage.get() == null)
 
