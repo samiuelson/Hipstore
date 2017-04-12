@@ -1,1 +1,1 @@
-include ':hipstore'
+include ':hipstore', ':hipstore-kotlin-extensions'
