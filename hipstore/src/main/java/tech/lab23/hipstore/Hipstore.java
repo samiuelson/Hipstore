@@ -8,6 +8,8 @@ interface Hipstore {
         void remove(T item);
         void add(T item);
         void add(T item, int index);
+        void addAll(List<T> items);
+        void addAll(int position, List<T> items);
         List<T> getAll();
         void clear();
     }

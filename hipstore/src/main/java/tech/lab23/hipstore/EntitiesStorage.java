@@ -62,6 +62,20 @@ public class EntitiesStorage<T> implements Hipstore.MultiEntities<T> {
     }
 
     @Override
+    public void addAll(List<T> items) {
+        final List<T> oldItems = getAll();
+        oldItems.addAll(items);
+        prefs.edit().putString(key, listToJsonString(oldItems)).apply();
+    }
+
+    @Override
+    public void addAll(int position, List<T> items) {
+        final List<T> oldItems = getAll();
+        oldItems.addAll(position, items);
+        prefs.edit().putString(key, listToJsonString(oldItems)).apply();
+    }
+
+    @Override
     public List<T> getAll() {
         final String jsonString = prefs.getString(key, "");
         return jsonStringToList(jsonString);
