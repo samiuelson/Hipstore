@@ -29,4 +29,5 @@ dependencies {
     testCompile "org.robolectric:robolectric:3.1.2"
     testCompile 'junit:junit:4.12'
     testCompile 'junit:junit:4.12'
+    testCompile project(':hipstore-kotlin-extensions')
 }
